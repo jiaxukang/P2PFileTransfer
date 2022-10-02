@@ -1,4 +1,6 @@
-# P2PFileTransfer
+
+Project 1
+=========
 
 The repository contains a framework and skeleton code for a peer-to-peer file sharing system using a hybrid client/server and peer-to-peer architecture. In this architecture there are two components:
 
@@ -27,7 +29,7 @@ The Skeleton code may need to be updated throughout the project. If students fol
 
 ### Compiling and running the Server
 
-    cd P2PFileTransfer
+    cd idxsrv
     mvn assembly:single
     java -cp target/idxsrv-0.0.1-SNAPSHOT-jar-with-dependencies.jar comp90015.idxsrv.IdxSrv
 
@@ -35,7 +37,7 @@ Use the `-h` option for help on options to change server configuration settings 
 
 ### Compiling and running the Peer
 
-    cd P2PFileTransfer
+    cd idxsrv
     mvn assembly:single
     java -cp target/idxsrv-0.0.1-SNAPSHOT-jar-with-dependencies.jar comp90015.idxsrv.Filesharer
 
@@ -43,7 +45,7 @@ The Peer uses a terminal text GUI that is best run in a UNIX/Linux terminal. Whe
 
 ## Server
 
-The Server code must not be modified. The Server accepts TCP connections and uses a request-per-connection session protocol as defined in `Server.java`. The session consists of a welcome message, an authentication step, and then a single request using a request-reply protocol. All messages are formatted as JSON Objects and transmitted as strings with a new line character as a delimiter, i.e. one message per line. The client should make use of the following messages for the session handshake (welcome and authentication):
+The Server code must not be modified. The Server accepts TCP connections and uses a request-per-connection session protocol as defined in `Server.java`. The session consists of a welcome message, an authentication step, and then a single request using a request-reply protocol. All messages are formatted as JSON Objects and transmitted as strings with a new line character as a delimiter, i.e. one message per line. The client should make use of the following messages for the session handshake (welcome and authentication): 
 
 - `WelcomeMsg` : sent by the server as the first message on any new connection
 - `AuthenticateRequest` : sent by the client to request authentication
@@ -108,7 +110,7 @@ The `filemgr` package provides a standard method for dividing a file into consta
 
 ## Terminal text GUI
 
-The Peer must make use of the `ISharerGUI` interface to update the GUI with all relevant information, including logging information to the terminal. The Peer cannot use standard system I/O.
+The Peer must make use of the `ISharerGUI` interface to update the GUI with all relevant information, including logging information to the terminal. The Peer cannot use standard system I/O. 
 
 ## Tasks for Project 1
 
@@ -116,3 +118,4 @@ In this project, the following tasks must be completed:
 
 - Implement the Peer functionality in `Peer.java` required by the GUI, as described in the `IPeer.java` interface definition.
 - Prepare a written submission. The details of the written submission will be provided separately.
+
